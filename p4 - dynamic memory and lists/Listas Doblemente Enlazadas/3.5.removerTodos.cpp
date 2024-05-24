@@ -3,9 +3,10 @@
 
 
 // Función para remover todos los elementos x de una lista doblemente encadenada
-void removerTodos(lista& lista, int x) {
-    nodo_doble* actual = lista;
-
+void removerTodos(lista& l, int x) {
+    
+    nodo_doble* actual = l; // ó lista actual = l;
+    
 
     while (actual != NULL) {
         // Guardamos una referencia al nodo actual antes de avanzar al siguiente
@@ -14,7 +15,7 @@ void removerTodos(lista& lista, int x) {
         if (actual->elem == x) {
             // Caso especial: si el nodo a eliminar es el primero
             if (actual->ant == NULL) {
-                lista = siguiente;
+                l = siguiente;
             } else {
                 actual->ant->sig = siguiente;
             }
