@@ -89,6 +89,26 @@ void imprimirABB(ABB arbol) {
 
 
 
+
+
+// liberar memoria
+// liberar memoria
+void liberarMemoria(ABB raiz) {
+    if (raiz == NULL) {
+        return;
+    }
+    
+    liberarMemoria(raiz->izq);
+    liberarMemoria(raiz->der);
+    
+    delete raiz;
+}
+
+
+
+
+
+
 // 
 ABB filtrado(ABB a, uint cota){
     ABB result;
@@ -164,6 +184,10 @@ int main() {
 
     // Liberar memoria (puedes omitir esta parte si no estás probando en un entorno con gestión automática de memoria)
     // Aquí deberías tener funciones para liberar la memoria del árbol, como liberarABB() o similar
+
+    liberarMemoria(arbol);
+
+    
 
     return 0;
 }

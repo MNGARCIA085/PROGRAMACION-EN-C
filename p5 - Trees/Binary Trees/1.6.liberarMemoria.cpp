@@ -11,6 +11,8 @@ void liberarMemoria(AB raiz) {
     liberarMemoria(raiz->der);
     
     delete raiz;
+
+    // raiz = NUUL; chequear como buena práctica
 }
 
 

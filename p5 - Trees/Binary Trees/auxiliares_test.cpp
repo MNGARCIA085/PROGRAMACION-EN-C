@@ -1,10 +1,6 @@
 #include "auxiliares.h"
 
 
-
-
-
-
 int main() {
     AB raiz = nullptr;
     uint valores[] = {5, 3, 7, 2, 4, 6, 8};
