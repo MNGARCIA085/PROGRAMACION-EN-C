@@ -28,9 +28,7 @@ AG buscar(int x, AG t){
     }
 }
 
-
-
-
+// insertar
 void insertar(int v, int w, AG & t){
     // chequeos para saber si están
     AG nodo_v = buscar(v, t);
@@ -46,3 +44,29 @@ void insertar(int v, int w, AG & t){
     }
 
 }
+
+
+// main para chequear
+int main() {
+
+    // árbol de prueba
+    AG arbol = nuevoNodo(1);
+
+
+    imprimirPreorden(arbol);
+    printf("\n");
+
+    insertar(2, 1, arbol);
+    insertar(7, 2, arbol);
+    insertar(9, 7, arbol);
+    insertar(25, 17, arbol); // no debería hacer nada
+
+    imprimirPreorden(arbol);
+
+
+    liberarArbol(arbol);
+
+    return 0;
+}
+
+// g++ 5.4.insertar.cpp auxiliares.cpp -o insertar

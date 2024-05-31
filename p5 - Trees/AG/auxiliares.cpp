@@ -42,3 +42,13 @@ void liberarArbol(AG raiz) {
         delete(raiz);
     }
 }
+
+
+// los del ej. 5
+AG arbolHoja(int x){
+    AG arbol = new nodoAG;
+    arbol -> dato = x;
+    arbol -> pH = NULL;
+    arbol -> sH = NULL;
+    return arbol;
+}

@@ -24,9 +24,11 @@ void imprimirPreorden(AG raiz);
 // Función para insertar un valor en el árbol binario
 void insertarHijo(AG& padre, int dato);
 
-
-
 // Función para liberar la memoria del árbol
 void liberarArbol(AG raiz);
+
+
+AG arbolHoja(int x);
+
 
 #endif // AUXILIARES_H

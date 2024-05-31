@@ -21,9 +21,8 @@ int main() {
     insertarHijo(arbol->pH->sH, 7);
 
     // Imprimir el árbol en preorden
-    //cout << "Árbol en preorden: ";
     imprimirPreorden(arbol);
-    //cout << endl;
+
 
     liberarArbol(arbol);
 
